@@ -9,9 +9,9 @@
         <module>common</module>
     </modules>
     <parent>
-        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.1</version>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.djh.DingChat</groupId>
@@ -25,9 +25,32 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- spring boot 版本号 -->
+        <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
+        <!-- netty 版本号 -->
+        <netty.version>4.1.34.Final</netty.version>
+        <!-- lombok 版本号 -->
+        <lombok.version>1.18.16</lombok.version>
+        <!-- junit 版本号 -->
+        <junit.version>4.11</junit.version>
+        <!-- fastjson版本号 -->
+        <fastjson.version>1.2.62</fastjson.version>
+        <!-- mybatis 版本号-->
+        <mybatis.starter.version>1.3.2</mybatis.starter.version>
+        <!-- mybatis generator 版本号 -->
+        <mybatis.generator.version>1.3.6</mybatis.generator.version>
+        <!-- tkmybatis 版本号 -->
+        <tkmybatis.version>2.1.5</tkmybatis.version>
+        <!-- tkmybatis mapper 版本号 -->
+        <tkmybatis.mapper.version>4.1.5</tkmybatis.mapper.version>
+        <!-- mysql 版本号 -->
+        <mysql.version>8.0.15</mysql.version>
+        <!-- druid 版本号 -->
+        <druid.version>1.1.9</druid.version>
     </properties>
 
     <dependencies>
+
         <!--引入Spring boot start-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,13 +72,47 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--引入mybatis-->
+        <!--引入fastjson-->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.6</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
+        <!-- 引入mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>${mybatis.generator.version}</version>
+        </dependency>
+
+        <!-- 引入 tk.mybatis -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>${tkmybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>${tkmybatis.mapper.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
 
         <!--引入junit-->
         <dependency>
